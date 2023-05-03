@@ -1,4 +1,15 @@
-console.log("%cElzero %cWeb %cSchool",
-     "color:red; font-size:40px;",
-     "color:green; font-size:40px; font-weight:bold",
-     "color:white; background-color:blue; font-size:40px")
+console.group("Group 1");
+console.log("Message one");
+console.log("Message two");
+    console.groupCollapsed("Child Group")
+    console.log("Message one");
+    console.log("Message two");
+        console.groupCollapsed("Grand Child Group")
+        console.log("Message one");
+        console.log("Message two");
+        console.groupEnd()
+    console.groupEnd()
+console.groupEnd()
+console.group("Group 2")
+console.log("Message one");
+console.log("Message two");
