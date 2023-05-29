@@ -1,7 +1,12 @@
-let arr1 = ["A", "C", "X"];
-let arr2 = ["D", "E", "F", "Y"];
-let allArrs = [];
+let zero = 0;
+let counter = 3;
+let my = ["Ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"];
 
-allArrs = arr1.concat(arr2).sort().slice(-arr1.length).join("").toLowerCase();
+my.pop(); my.pop(); my.reverse()
+console.log(my); // ["Osama", "Elham", "Mazero", "Ahmed"];
 
-console.log(allArrs); // fxy
+console.log(my.slice(++zero, counter)); // ["Elham", "Mazero"]
+
+console.log(my[1].substring(0,2) + my[2].slice(2)); // "Elzero"
+
+console.log(my[2].slice(4, 5) + my[2].slice(5).toUpperCase()); // "rO"
