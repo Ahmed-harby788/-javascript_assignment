@@ -1,12 +1,21 @@
-let zero = 0;
-let counter = 3;
-let my = ["Ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"];
+let start = 10;
+let end = 100;
+let exclude = 40;
 
-my.pop(); my.pop(); my.reverse()
-console.log(my); // ["Osama", "Elham", "Mazero", "Ahmed"];
+for( i = start; i <= end; i+= 10){
+    if( i == 40 ){
+        continue;
+    }
+    console.log(i)
+}
 
-console.log(my.slice(++zero, counter)); // ["Elham", "Mazero"]
-
-console.log(my[1].substring(0,2) + my[2].slice(2)); // "Elzero"
-
-console.log(my[2].slice(4, 5) + my[2].slice(5).toUpperCase()); // "rO"
+// Output
+10
+20
+30
+50
+60
+70
+80
+90
+100
