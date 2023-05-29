@@ -1,8 +1,6 @@
-let myFriends = ["Ahmed", "Elham", "Osama", "Gamal"];
-let num = 3;
+let friends = ["Ahmed", "Eman", "Osama", "Gamal"];
 
-// Method 1
-console.log(myFriends.splice(0, num)); // ["Ahmed", "Elham", "Osama"];
+friends.shift();
+friends.pop()
 
-// Method 2
-console.log(myFriends.slice(0, num)); // ["Ahmed", "Elham", "Osama"];
+console.log(friends); // ["Eman", "Osama"]
