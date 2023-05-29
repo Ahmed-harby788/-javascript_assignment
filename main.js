@@ -1,4 +1,12 @@
-let website = "Go";
-let words = [`${website}ogle`, "Facebook", ["Elzero", "Web", "School"]];
+let needle = "JS";
+let haystack = ["PHP", "JS", "Python"];
 
-console.log(words[words.length - 1][0].slice(website.length).toUpperCase()); // ZERO
+if (haystack.includes(needle)){
+    console.log("found")
+}
+if (haystack.indexOf(needle)){
+    console.log("found")
+}
+if (haystack[1] === needle){
+    console.log("found")
+}
