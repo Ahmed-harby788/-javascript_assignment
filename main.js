@@ -1,24 +1,30 @@
-let start = 10;
-let end = 0;
-let stop = 3;
+let start = 1;
+let end = 6;
+let breaker = 2;
 
 // Output
-// 10
-// 09
-// 08
-// 07
-// 06
-// 05
-// 04
-// 03
+// 1
+// -- 2
+// -- 4
+// 2
+// -- 2
+// -- 4
+// 3
+// -- 2
+// -- 4
+// 4
+// -- 2
+// -- 4
+// 5
+// -- 2
+// -- 4
+// 6
+// -- 2
+// -- 4
 
-for (let i = start; i >= stop; i-- ){
-
-    if(i < start){
-        console.log(`0${i}`)
-    }
-    else{
-        console.log(i)
+for(i = start; i <= 6; i++){
+    console.log(i);
+    for(j = breaker; j <= breaker + breaker; j = j + breaker){
+        console.log(`-- ${j}`)
     }
 }
-
