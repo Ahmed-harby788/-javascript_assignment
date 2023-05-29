@@ -1,21 +1,24 @@
 let start = 10;
-let end = 100;
-let exclude = 40;
-
-for( i = start; i <= end; i+= 10){
-    if( i == 40 ){
-        continue;
-    }
-    console.log(i)
-}
+let end = 0;
+let stop = 3;
 
 // Output
-10
-20
-30
-50
-60
-70
-80
-90
-100
+// 10
+// 09
+// 08
+// 07
+// 06
+// 05
+// 04
+// 03
+
+for (let i = start; i >= stop; i-- ){
+
+    if(i < start){
+        console.log(`0${i}`)
+    }
+    else{
+        console.log(i)
+    }
+}
+
