@@ -1,16 +1,18 @@
-let index = 10;
-let jump = 2;
-let i = index;
+let friends = ["Ahmed", "Sayed", "Eman", "Mahmoud", "Ameer", "Osama", "Sameh"];
+let letter = "a";
+let count = letter.length;
 
-for ( ;; ) {
-    console.log(i);
-    i -= 2
-    if (i === 2){
-        break;
+for(i = 0; i < friends.length; i++){
+    if(!friends[i].toLowerCase().startsWith(letter)){
+        console.log(`${count} => ${friends[i]}`)
+        count++
     }
+    
 }
+
 // Output
-10
-8
-6
-4
+"1 => Sayed"
+"2 => Eman"
+"3 => Mahmoud"
+"4 => Osama"
+"5 => Sameh"
