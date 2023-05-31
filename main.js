@@ -1,30 +1,16 @@
-let start = 1;
-let end = 6;
-let breaker = 2;
+let index = 10;
+let jump = 2;
+let i = index;
 
-// Output
-// 1
-// -- 2
-// -- 4
-// 2
-// -- 2
-// -- 4
-// 3
-// -- 2
-// -- 4
-// 4
-// -- 2
-// -- 4
-// 5
-// -- 2
-// -- 4
-// 6
-// -- 2
-// -- 4
-
-for(i = start; i <= 6; i++){
+for ( ;; ) {
     console.log(i);
-    for(j = breaker; j <= breaker + breaker; j = j + breaker){
-        console.log(`-- ${j}`)
+    i -= 2
+    if (i === 2){
+        break;
     }
 }
+// Output
+10
+8
+6
+4
