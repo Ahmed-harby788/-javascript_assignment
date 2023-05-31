@@ -1,13 +1,18 @@
-let start = 0;
-let mix = [1, 2, 3, "A", "B", "C", 4];
+let friends = ["Ahmed", "Sayed", "Ali", 1, 2, "Mahmoud", "Amany"];
+let index = 0;
+let counter = 0;
 
-for(let i = 1; i < mix.length; i++){
-    if(typeof mix[i] === "string")
-    continue;
-    console.log(mix[i])
+while(index < friends.length){
+    if(typeof friends[index] === "number" || friends[index].startsWith("A")){
+        index++;
+        continue;
+    }
+    console.log(`${++counter} => ${friends[index]}`)
+    index++;
+
 }
 
+
 // Output
-2
-3
-4
+"1 => Sayed"
+"2 => Mahmoud"
