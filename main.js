@@ -1,14 +1,13 @@
 let start = 0;
-let swappedName = "elZerO";
-let result = ""
+let mix = [1, 2, 3, "A", "B", "C", 4];
 
-for(i = start; i < swappedName.length; i++){
-    if(swappedName[i] == swappedName[i].toUpperCase()){
-        result += swappedName[i].toLowerCase()
-    }else{
-        result += swappedName[i].toUpperCase()
-    }
+for(let i = 1; i < mix.length; i++){
+    if(typeof mix[i] === "string")
+    continue;
+    console.log(mix[i])
 }
-    console.log(result);
+
 // Output
-"ELzERo"
+2
+3
+4
