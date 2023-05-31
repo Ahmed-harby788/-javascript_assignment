@@ -1,18 +1,14 @@
-let friends = ["Ahmed", "Sayed", "Eman", "Mahmoud", "Ameer", "Osama", "Sameh"];
-let letter = "a";
-let count = letter.length;
+let start = 0;
+let swappedName = "elZerO";
+let result = ""
 
-for(i = 0; i < friends.length; i++){
-    if(!friends[i].toLowerCase().startsWith(letter)){
-        console.log(`${count} => ${friends[i]}`)
-        count++
+for(i = start; i < swappedName.length; i++){
+    if(swappedName[i] == swappedName[i].toUpperCase()){
+        result += swappedName[i].toLowerCase()
+    }else{
+        result += swappedName[i].toUpperCase()
     }
-    
 }
-
+    console.log(result);
 // Output
-"1 => Sayed"
-"2 => Eman"
-"3 => Mahmoud"
-"4 => Osama"
-"5 => Sameh"
+"ELzERo"
