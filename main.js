@@ -1,9 +1,9 @@
-let mix = [1, 2, 3, "E", 4, "l", "z", "e", "r", 5, "o"];
+let myString = "EElllzzzzzzzeroo";
 
-let letter = mix.map(function (ele){
-  return isNaN(parseInt(ele)) ? ele: ""})
-  .reduce(function (acc, current){
-    return `${acc}${current}`
-  })
-  console.log(letter)
+let name = myString.split("").filter(function (ele, index){
+  return myString.indexOf(ele) === index
+}).reduce(function (acc, current){
+  return `${acc}${current}`
+})
+console.log(name);
 // Elzero
