@@ -1,9 +1,14 @@
-let myString = "EElllzzzzzzzeroo";
+let myArray = ["E", "l", "z", ["e", "r"], "o"];
+// let newArray = myArray.reduce(function (acc, curr) {
+//     return `${acc}${curr}`
+// })
+// .split("").map(function (el) {
+//   return el != "," ? el : "";
+// })
+// .join("")
+// console.log(newArray);
 
-let name = myString.split("").filter(function (ele, index){
-  return myString.indexOf(ele) === index
-}).reduce(function (acc, current){
-  return `${acc}${current}`
-})
-console.log(name);
-// Elzero
+
+let newArray = myArray.flat()
+
+console.log(newArray)
