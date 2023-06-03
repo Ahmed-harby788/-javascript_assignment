@@ -1,14 +1,11 @@
-let myArray = ["E", "l", "z", ["e", "r"], "o"];
-// let newArray = myArray.reduce(function (acc, curr) {
-//     return `${acc}${curr}`
-// })
-// .split("").map(function (el) {
-//   return el != "," ? el : "";
-// })
-// .join("")
-// console.log(newArray);
+let numsAndStrings = [1, 10, -10, -20, 5, "A", 3, "B", "C"];
 
+let nums = numsAndStrings.filter(function (el){
+  return !isNaN(el) ? el : "";
+})
+.map(function (el){
+  return - el;
+})
+console.log(nums)
 
-let newArray = myArray.flat()
-
-console.log(newArray)
+// [-1, -10, 10, 20, -5, -3]
