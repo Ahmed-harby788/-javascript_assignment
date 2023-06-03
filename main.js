@@ -1,11 +1,7 @@
-let numsAndStrings = [1, 10, -10, -20, 5, "A", 3, "B", "C"];
+let nums = [2, 12, 11, 5, 10, 1, 99];
 
-let nums = numsAndStrings.filter(function (el){
-  return !isNaN(el) ? el : "";
-})
-.map(function (el){
-  return - el;
-})
-console.log(nums)
-
-// [-1, -10, 10, 20, -5, -3]
+let result = nums.reduce(function(acc, current){
+  return current % 2 == 0 ? acc * current: acc + current;
+}, 1)
+console.log(result);
+// 500
