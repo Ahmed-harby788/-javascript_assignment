@@ -1,16 +1,26 @@
-let result = 0;
-
-function multiply (...number){
-    for(i = 0; i < number.length; i++ ){
-        if(typeof number[i] === "string"){
-            continue;
-        }else{
-            result = parseInt(number[i - 1]) * parseInt(number[i])
-        }
+function getDetails(zName, zAge, zCountry) {
+    function namePattern(zName) {
+        return `${zName.slice(0, zName.indexOf(" "))}${zName.substr(zName.indexOf(" "), 2).toUpperCase()}`
     }
-    return result; 
+
+    function ageWithMessage(zAge) {
+        return `Your Age Is ${parseInt(zAge)}`
+      // 38 Is My Age => Your Age Is 38
+      // 32 Is The Age => Your Age Is 32
+    }
+    function countryTwoLetters(zCountry) {
+            return `You Live In ${zCountry.substr(0, 2)}`
+      // Egypt => You Live In EG
+      // Syria => You Live In SY
+    }
+    function fullDetails() {
+        return `Hello ${namePattern(zName)},${ageWithMessage(zAge)},${countryTwoLetters(zCountry)}`;
+    }
+    return fullDetails(); // Do Not Edit This
 }
 
-console.log(multiply(10, 20)); // 200
-console.log(multiply("A", 10, 30)); // 300
-console.log(multiply(100.5, 10, "B")); // 1000
+console.log(getDetails("Osama Mohamed", "38 Is My Age", "Egypt"));
+  // Hello Osama M., Your Age Is 38, You Live In EG
+
+console.log(getDetails("Ahmed ali", "32 Is The Age", "Syria"));
+// Hello Ahmed A., Your Age Is 32, You Live In SY
