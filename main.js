@@ -1,18 +1,16 @@
-// function itsMe() {
-//   return `Iam A Normal Function`;
+// function checker(zName) {
+//   return function (status) {
+//     return function (salary) {
+//       return status === "Available" ? `${zName}, My Salary Is ${salary}` : `Iam Not Avaialble`;
+//     };
+//   };
 // }
 
-let itsMe = () => `Iam A Normal Function`;
+let checker = (zName) => (status) => (salary) => status === "Available" ? `${zName}, My Salary Is ${salary}` : `Iam Not Avaialble`;
 
 
-console.log(itsMe()); // Iam A Normal Function
 
 
-// function urlCreate(protocol, web, tld) {
-//   return `${protocol}://www.${web}.${tld}`;
-// }
 
-let urlCreate = (protocol, web, tld) => `${protocol}://www.${web}.${tld}`;
-
-
-console.log(urlCreate("https", "elzero", "org")); // https://www.elzero.org
+console.log(checker("Osama")("Available")(4000)); // Osama, My Salary Is 4000
+console.log(checker("Ahmed")("Not Available")()); // Iam Not Avaialble
