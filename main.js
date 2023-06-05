@@ -1,27 +1,26 @@
-// Method One
-let objMethodOne = {
-    property : "Method One"
-}
+let a = 1;
 
-console.log(objMethodOne.property); // "Method One"
+let threeNums = {
+b: 2,
+c: 3,
+d: 4,
+};
 
-// Method Two
-let objMethodTwo = new Object({
-    property : "Method Two"
-});
+let twoNums = {
+e: 5,
+f: 6,
+};
 
-console.log(objMethodTwo.property); // "Method Two"
+// Create Your Object Here in One Line
+let finalObject = Object.assign({a}, threeNums, twoNums)
 
-// Method Three
-let objMethodThree = Object.create({
-    property : "Method Three"
-})
+console.log(finalObject);
 
-console.log(objMethodThree.property); // "Method Three"
-
-// Method Four
-let objMethodFour = Object.assign({
-    property : "Method Four"
-})
-
-console.log(objMethodFour.property); // "Method Four"
+/*
+a: 1
+b: 2
+c: 3
+d: 4
+e: 5
+f: 6
+*/
