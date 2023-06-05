@@ -1,7 +1,14 @@
-let nums = [2, 12, 11, 5, 10, 1, 99];
+let member = {
+    name : "Elzero",
+    age : 38,
+    country : "Egypt",
+    fullDetails(){
+        return "My Name Is " + member.name + " My Age Is " + member.age + " I Live in " + member.country;
+    }
+}
 
-let result = nums.reduce(function(acc, current){
-  return current % 2 == 0 ? acc * current: acc + current;
-}, 1)
-console.log(result);
-// 500
+console.log(member.name); // Elzero
+console.log(member.age); // 38
+console.log(member.country); // Egypt
+console.log(member.fullDetails());
+// My Name Is Elzero, My Age Is 38, I Live in Egypt
