@@ -1,14 +1,27 @@
-let member = {
-    name : "Elzero",
-    age : 38,
-    country : "Egypt",
-    fullDetails(){
-        return "My Name Is " + member.name + " My Age Is " + member.age + " I Live in " + member.country;
-    }
+// Method One
+let objMethodOne = {
+    property : "Method One"
 }
 
-console.log(member.name); // Elzero
-console.log(member.age); // 38
-console.log(member.country); // Egypt
-console.log(member.fullDetails());
-// My Name Is Elzero, My Age Is 38, I Live in Egypt
+console.log(objMethodOne.property); // "Method One"
+
+// Method Two
+let objMethodTwo = new Object({
+    property : "Method Two"
+});
+
+console.log(objMethodTwo.property); // "Method Two"
+
+// Method Three
+let objMethodThree = Object.create({
+    property : "Method Three"
+})
+
+console.log(objMethodThree.property); // "Method Three"
+
+// Method Four
+let objMethodFour = Object.assign({
+    property : "Method Four"
+})
+
+console.log(objMethodFour.property); // "Method Four"
