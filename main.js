@@ -1,7 +1,16 @@
-let myImg = document.getElementsByTagName("img")
+for(i = 0; i < 100; i++){
+let myDive = document.createElement("div")
+let myh2 = document.createElement("h2")
+let myp = document.createElement("p")
 
-for(i = 0; i < myImg.length; i++){
-    myImg[i].src = "https://elzero.org/wp-content/themes/elzero/imgs/logo.png";
-    myImg[i].setAttribute("alt", "Elzero Logo");
-    myImg[i].setAttribute("style", "background-color: black; width: 200px; height: 50x");
+let myHeading= document.createTextNode(`product title ${i + 1}`)
+let myPText = document.createTextNode(`product text ${i + 1}`)
+
+myDive.className = "product"
+myh2.appendChild(myHeading);
+myp.appendChild(myPText);
+myDive.appendChild(myh2);
+myDive.appendChild(myp);
+
+document.body.appendChild(myDive);
 }
