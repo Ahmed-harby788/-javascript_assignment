@@ -1,8 +1,14 @@
-let userInput = document.querySelector('[name="dollar"]');
+let divTwo = document.querySelector(".two");
+let divOne = document.querySelector(".one");
 
-let result = document.querySelector(".result");
+let oneAtrr = divOne.getAttribute("title"); //two
+let twoAtrr = divTwo.getAttribute("title"); //one
 
-userInput.oninput = function() {
-    let calc =  userInput.value * 15.6;
-    result.innerHTML = `{${userInput.value}} USD Dollar = {${calc.toFixed(2)}} Egyptian Pound`
-}
+let divLength = document.getElementsByTagName("div").length;
+
+
+divOne.setAttribute("title", twoAtrr);
+divTwo.setAttribute("title", oneAtrr);
+
+divOne.innerHTML = twoAtrr
+divTwo.innerHTML = `${oneAtrr}${divLength}` 
