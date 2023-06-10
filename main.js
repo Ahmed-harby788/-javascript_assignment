@@ -6,6 +6,6 @@ for(i = 0; i < images.length; i++){
     if(images[i].hasAttribute("alt")){
         images[i].alt = "old";
     }else{
-        images[i].setAttribute("alt", "old")
+        images[i].setAttribute("alt", "Elzero New")
     }
 }
