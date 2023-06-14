@@ -1,98 +1,33 @@
-// alert("hello")
 
+function model (){
+    let box = document.createElement("div");
+    let close = document.createElement("div");
+    let h2 = document.createElement("h2");
+    let tH2 = document.createTextNode("Welcome");
+    let p = document.createElement("p");
+    let pText = document.createTextNode("Welcome to Elzero Web School");
+    let tClose = document.createTextNode("x");
 
-// let a = confirm("Are you shour")
-// console.log(a)
+    box.className = "box";
+    close.className = "close"
 
-// prompt("can you write this code");
-// console.log(prompt("can you write this code"))
+    h2.append(tH2);
+    p.append(pText);
+    close.append(tClose);
 
-// setTimeout( myTimeout => {
-//     document.getElementById("demo").innerHTML = "Happy Birthday!"
-// }, 5000);
+    box.append(close, h2, p);
 
-// function clearTime(){
-//     clearTimeout(myTimeout)
-// }
-// setTimeout(function () {
-//     window.open("https://google.com", "_blank", "height=500,width=500,")
-// }, 2000)
+    document.body.append(box);
+}
 
-// let  = window.open("https://google.com", "", "width=500,height=500")
+function close(){
+    let divBox = document.querySelector(".box");
+    let divclose = document.querySelector(".close");
+    let btnOpen = document.querySelector("button");
 
-
-
-
-
-
-
-
-
-
-// let msg = prompt("Print Number From - To","Example: 5-20");
-// let arrMsg = msg.split("-");
-
-// // console.log(arrMsg);
-
-// let start, end;
-
-// if(+arrMsg[0] < +arrMsg[1]){
-//     start=+arrMsg[0];
-//     end=+arrMsg[1]
-// } else if (+arrMsg[0] > +arrMsg[1]){
-//     start=+arrMsg[1];
-//     end=+arrMsg[0]
-    
-// } else{
-//     alert("enter correct number")
-// }
-
-
-// function range(size, startAt = 0) {
-//     return [...Array(+size).keys()].map(i => i + startAt);
-// }
-
-
-
-// function inputNumber (start, end){
-
-//     let size = end-start+1;
-//     let arr = range(size, start)
-
-//     arr.map(el => console.log(el))
-// }
-
-// inputNumber(start, end);
-
-
-
-
-
-let promptMsg1 = prompt("Print Number From - To", "Example: 5-20");
-
-let sortMsg1 = promptMsg.split("-").sort((a, b) => a - b);
-
-for (i = sortMsg[0]; i <= sortMsg[1]; i++){
-    document.write(`${i} <br>`);
-} 
-
-
-
-
-// let promptMsg = prompt("Print Number From - To", "Example: 5-20");
-
-// let sortMsg = promptMsg.trim().split("-");
-
-// console.log(sortMsg);
-
-// sortMsg.reduce(function (acc, curr) {
-//     if (+acc > +curr) {
-//     for (i = +curr; i <= +acc; i++) {
-//         document.write(`${i} <br>`);
-//     }
-//     } else {
-//     for (i = +acc; i <= +curr; i++) {
-//         document.write(`${i} <br>`);
-//     }
-//     }
-// });
+    divclose.addEventListener("click", (ele) => {
+        divBox.remove();
+    });
+    };
+setTimeout(model, 1000)  
+setTimeout(close, 1000)  
