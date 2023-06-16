@@ -1,33 +1,18 @@
+let div = document.createElement("div");
+let cunter = 10;
 
-function model (){
-    let box = document.createElement("div");
-    let close = document.createElement("div");
-    let h2 = document.createElement("h2");
-    let tH2 = document.createTextNode("Welcome");
-    let p = document.createElement("p");
-    let pText = document.createTextNode("Welcome to Elzero Web School");
-    let tClose = document.createTextNode("x");
+// div.apped(cunter);
 
-    box.className = "box";
-    close.className = "close"
+let ruselt = setInterval(function (){
+    document.body.appendChild(div);
+    div.innerHTML = cunter
+    cunter = cunter - 1;
 
-    h2.append(tH2);
-    p.append(pText);
-    close.append(tClose);
+    if(cunter < 0){
+        clearInterval(ruselt); 
+    }
+},1000)
 
-    box.append(close, h2, p);
-
-    document.body.append(box);
-}
-
-function close(){
-    let divBox = document.querySelector(".box");
-    let divclose = document.querySelector(".close");
-    let btnOpen = document.querySelector("button");
-
-    divclose.addEventListener("click", (ele) => {
-        divBox.remove();
-    });
-    };
-setTimeout(model, 1000)  
-setTimeout(close, 1000)  
+// for (i = 10; i >= 0; i--){
+//     console.log(i)
+// }
