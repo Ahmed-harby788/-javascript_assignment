@@ -1,23 +1,22 @@
-let selectFont = document.querySelector("#select__font");
-let selectColor = document.querySelector("#select__color");
-let selectFontSize  = document.querySelector("#select__fontSize");
+let email = document.querySelector("#email");
+let text = document.querySelector("#text");
+let password = document.querySelector("#password");
+let select_value = document.querySelector("#select_value")
 
-selectFont.addEventListener("change", (e) => {
-    window.localStorage.setItem("font", selectFont.value);
-    document.body.style.fontFamily = localStorage.getItem("font");
+email.addEventListener("input", (el) => {
+    localStorage.setItem("email", email.value);
 })
-selectColor.addEventListener("change", (e) => {
-    window.localStorage.setItem("color", selectColor.value);
-    document.body.style.color = localStorage.getItem("color");
+text.addEventListener("input", (el) => {
+    localStorage.setItem("text", text.value);
 })
-selectFontSize.addEventListener("change", (e) => {
-    window.localStorage.setItem("size", selectFontSize.value);
-    document.body.style.fontSize = localStorage.getItem("size");
+password.addEventListener("input", (el) => {
+    localStorage.setItem("password", password.value);
 })
-document.body.style.fontFamily = localStorage.getItem("font");
-document.body.style.color = localStorage.getItem("color");
-document.body.style.fontSize = localStorage.getItem("size");
+select_value.addEventListener("input", (el) => {
+    localStorage.setItem("select_value", select_value.value);
+})
 
-selectFont.value = localStorage.getItem("font");
-selectColor.value = localStorage.getItem("color");
-selectFontSize.value = localStorage.getItem("size");
+email.value = sessionStorage.getItem("email");
+text.value = sessionStorage.getItem("text");
+password.value = sessionStorage.getItem("password");
+select_value = sessionStorage.getItem("select_value")

@@ -21,43 +21,24 @@
             align-items: center;
             height: 100vh;
             flex-wrap: wrap;
+            flex-direction: column;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div>    
-            <div style="margin-bottom: 20px;">Hello My Name Is Ahmed</div>
-            <!-- Font Select Box -->
-            <select id="select__font">
-                <option value="Open Sans">Open</option>
-                <option value="Cairo">Cairo</option>
-                <option value="Poppins">Poppins</option>
+    <div >
+        <form class="container">
+            <input style="margin-bottom: 20px; padding: 5px;" type="email" id="email" placeholder="Enter Your Email">
+            <input style="margin-bottom: 20px; padding: 5px;" type="text" id="text" placeholder="Enter Your massage">
+            <input style="margin-bottom: 20px; padding: 5px;" type="password" id="password" placeholder="Enter Your password">
+            <select style="margin-bottom: 20px; padding: 5px;" id="select_value">
+                <option>first</option>
+                <option>second</option>
+                <option>third</option>
+                <option>fourth</option>
+                <option>fifth</option>
             </select>
-
-            <!-- Colors Select Box -->
-            <select id="select__color">
-                <option value="#0F6292">#0F6292</option>
-                <option value="#13005A">#13005A</option>
-                <option value="#FF6E31">#FF6E31</option>
-                <option value="#913175">#913175</option>
-                <option value="#AD8E70">#AD8E70</option>
-                <option value="#10A19D">#10A19D</option>
-            </select>
-
-            <!-- fontSize Select Box -->
-            <select id="select__fontSize">
-                <option value="16px">16</option>
-                <option value="18px">18</option>
-                <option value="20px">20</option>
-                <option value="22px">22</option>
-                <option value="24px">24</option>
-                <option value="26px">26</option>
-                <option value="28px">28</option>
-                <option value="30px">30</option>
-                <option value="40px">40</option>
-            </select>
-        </div>
+        </form>
     </div>
     <script src="main.js"></script>
 </body>
