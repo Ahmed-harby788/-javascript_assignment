@@ -1,15 +1,19 @@
-let div = document.createElement("div");
-let cunter = 10;
+let lis = document.querySelectorAll("ul li");
+let div = document.querySelector(".experiment");
 
-let ruselt = setInterval(function (){
-    document.body.appendChild(div);
-    div.innerHTML = cunter
-    cunter = cunter - 1;
-
-    if(div.innerHTML == 5){
-        open("https://elzero.org/", "", "hight=700, width= 700");
-    }
-
-    cunter < 0 ?clearInterval(ruselt) : "";
+if(window.localStorage.getItem("color")){
+    div.style.backgroundColor = window.localStorage.getItem("color");
     
-},1000)
+}
+
+lis.forEach((li) => {
+    li.addEventListener("click", (el) => {
+        lis.forEach((li) => {
+            li.classList.remove("active");
+        });
+        window.localStorage.setItem("color", el.target.dataset.color);
+        el.target.classList.add("active");
+        div.style.backgroundColor = window.localStorage.getItem("color");
+    
+    })
+});
