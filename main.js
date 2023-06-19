@@ -1,7 +1,13 @@
-let mySkills = ["HTML", "CSS", "JavaScript", ["PHP", "Python", ["Django", "Laravel"]]];
+let arr1 = ["Ahmed", "Sameh", "Sayed"];
+let arr2 = ["Mohamed", "Gamal", "Amir"];
+let arr3 = ["Haytham", "Shady", "Mahmoud"];
 
-let [a, b, c, [d, e, [f, g]]] = mySkills;
+let names = arr1.concat(arr2, arr3);
+names.sort().reverse();
+console.log(names);
 
-console.log(`My Skills: ${a}, ${b}, ${c}, ${d}, ${e}, ${f}, ${g}`);
+let [a, , , , b, , , , c] = names;
 
-// My Skills: HTML, CSS, JavaScript, PHP, Python, Django, Laravel
+console.log(`My Best Friends: ${a}, ${b}, ${c}`);
+
+// My Best Friends: Shady, Mahmoud, Ahmed
