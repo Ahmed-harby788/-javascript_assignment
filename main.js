@@ -9,7 +9,7 @@ let [o,a] = Object.keys(game.releases);
 
 let [u,j] = Object.values(game.releases)[0];
 
-let {US: u_price, JAP: j_price} = Object.values(game.releases)[1];
+let {US: u_price, JAP: j_price} = Object.values(game.releases)[1] ;
 
 let { Origin : or} = game.releases;
 
