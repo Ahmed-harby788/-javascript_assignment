@@ -1,5 +1,7 @@
-let setOfNumbers = new Set([10]);
-setOfNumbers.add(20).add(setOfNumbers.size);
+let myFriends = ["Osama", "Ahmed", "Sayed", "Sayed", "Mahmoud", "Osama"];
 
-console.log(setOfNumbers);
-console.log(setOfNumbers.size - 1);
+let newArray = new Set(myFriends.sort());
+console.log(newArray);
+
+// Needed Output
+(4) ['Ahmed', 'Mahmoud', 'Osama', 'Sayed']
