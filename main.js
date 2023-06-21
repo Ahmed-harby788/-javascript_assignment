@@ -1,7 +1,24 @@
-let myFriends = ["Osama", "Ahmed", "Sayed", "Sayed", "Mahmoud", "Osama"];
+let myInfo = {
+    username: "Osama",
+    role: "Admin",
+    country: "Egypt",
+};
 
-let newArray = new Set(myFriends.sort());
-console.log(newArray);
+let myMap = new Map(Object.entries(myInfo));
+// let myMap = new Map([
+//     ["username" , "Osama"],
+//     ["role" , "Admin"],
+//     ["country" , "Egypt"]
+// ]);
+
+console.log(myMap);
+console.log(myMap.size);
+console.log(myMap.has("role"));
+
 
 // Needed Output
-(4) ['Ahmed', 'Mahmoud', 'Osama', 'Sayed']
+// Map(3) {'username' => 'Osama', 'role' => 'Admin', 'country' => 'Egypt'}
+// 3
+// true\
+
+
