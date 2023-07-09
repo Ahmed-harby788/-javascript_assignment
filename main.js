@@ -1,5 +1,11 @@
+let date1 = "25/10/1982";
+let date2 = "25 - 10 - 1982";
+let date3 = "25 10 1982";
+let date4 = "25 10 82";
 
-let phone = "+(995)-123 (4567)";
-let re = phone.match(/\+\(\d{3}\)-\d{3}\s\(\d{4}\)/ig);
+let re = /\d{2}\s*-*\s*\/*\d{2}\/*\s*-*\s*\d{2,}/g;
 
-console.log(re);
+console.log(date1.match(re)); // "25/10/1982"
+console.log(date2.match(re)); // "25 - 10 - 1982"
+console.log(date3.match(re)); // "25 10 1982"
+console.log(date4.match(re)); // "25 10 82"
