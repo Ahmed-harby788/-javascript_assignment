@@ -1,26 +1,29 @@
-
-class Car{
-    constructor(name, model, price){
-        this.name = name
-        this.model = model
-        this.price = price
-    }
-    run() {
-        return `Running Now`
-    }
-    Stop() {
-        return `Car is Stopped`
+class Phone {
+    constructor(name, serial, price) {
+    this.name = name;
+    this.serial = serial;
+    this.price = price;
     }
 }
 
-let Car1 = new Car("MG", "2022", 420000);
-let Car2 = new Car("car2", "2021", 20000);
-let Car1ar3 = new Car("car3", "2022", 15000);
+  // Write Tablet Class Here
+class Tablet extends Phone{
+    constructor(name, serial, price, size) {
+        super(name, serial, price);
+        this.size = size || "Unknown";
+    }
+    fullDetails() {
+        return `${this.name} serial is ${this.serial} and Size is ${this.size}`;
+    }
+}
 
-console.log(`Car One Name Is ${Car1.name} And Model Is ${Car1.model} And Price Is ${Car1.price}`);
-console.log(`Car Is ${Car1.run()}`);
+let TabletOne = new Tablet("iPad", 100200300, 1500, 12.9);
+let TabletTwo = new Tablet("Nokia", 350450650, 800, 10.5);
+let TabletThree = new Tablet("LG", 250450650, 650);
 
-// Needed Output
-
-"Car One Name Is MG And Model Is 2022 And Price Is 420000"
-"Car Is Running Now"
+console.log(`${TabletOne.fullDetails()}`);
+  // iPad Serial is 100200300 And Size Is 12.9
+console.log(`${TabletTwo.fullDetails()}`);
+  // Nokia Serial is 350450650 And Size Is 10.5
+console.log(`${TabletThree.fullDetails()}`);
+  // LG Serial is 250450650 And Size Is Unknown
