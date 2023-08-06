@@ -1,8 +1,38 @@
+const myObj = {
+  username: "Elzero",
+  id: 100,
+  score: 1000,
+  country: "Egypt",
+};
+
 // Write Your Code Here
-String.prototype.addLove = function () {
-  return `I Love Elzero Web School`
+
+Object.defineProperty(myObj, "score",{
+  writable: false,
+  enumerable: true,
+  configurable: true,
+  value: 1000
+})
+
+Object.defineProperty(myObj, "id",{
+  writable: true,
+  enumerable: false,
+  configurable: true,
+  value: 100
+})
+
+delete myObj.country;
+
+myObj.score = 500;
+
+for (let prop in myObj) {
+  console.log(`${prop} => ${myObj[prop]}`);
 }
 
-// Do Not Edit Below
-let myStr = "Elzero";
-console.log(myStr.addLove()); // I Love Elzero Web School
+console.log(myObj);
+
+// Needed Output
+
+// "username => Elzero"
+// "score => 1000"
+// {username: 'Elzero', score: 1000, id: 100}
