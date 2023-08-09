@@ -1,13 +1,25 @@
-let t0 = performance.now();
+// Write Your Generator Function Here
 
-for (let i = 0; i <= 9999; i++){
-  console.log(i);
+function* gen(){
+  let i = 14;
+  let num = 140;
+  let sum = i + num;
+  yield i;
+  while (true){
+    yield sum;
+    sum += num += 200;
+  }
 }
 
-let t1 = performance.now();
 
-console.log(`Loop Took ${(t1 - t0).toFixed()} Milliseconds.`);
+let generator = gen();
 
-// Needed Output
-
-"Loop Took 1921 Milliseconds."
+console.log(generator.next()); // {value: 14, done: false}
+console.log(generator.next()); // {value: 154, done: false}
+console.log(generator.next()); // {value: 494, done: false}
+console.log(generator.next()); // {value: 1034, done: false}
+console.log(generator.next()); // {value: 1774, done: false}
+console.log(generator.next()); // {value: 2714, done: false}
+console.log(generator.next()); // {value: 3854, done: false}
+console.log(generator.next()); // {value: 5194, done: false}
+console.log(generator.next()); // {value: 6734, done: false}
