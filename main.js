@@ -1,38 +1,20 @@
-const myObj = {
-  username: "Elzero",
-  id: 100,
-  score: 1000,
-  country: "Egypt",
-};
+let dateNow = new Date();
+let birthday = new Date("April 20, 94");
 
-// Write Your Code Here
+let myAge = dateNow - birthday;
 
-Object.defineProperty(myObj, "score",{
-  writable: false,
-  enumerable: true,
-  configurable: true,
-  value: 1000
-})
-
-Object.defineProperty(myObj, "id",{
-  writable: true,
-  enumerable: false,
-  configurable: true,
-  value: 100
-})
-
-delete myObj.country;
-
-myObj.score = 500;
-
-for (let prop in myObj) {
-  console.log(`${prop} => ${myObj[prop]}`);
-}
-
-console.log(myObj);
+console.log(`${(myAge / 1000).toFixed()} Seconds`);
+console.log(`${(myAge / 1000 / 60).toFixed()} Minutes`);
+console.log(`${(myAge / 1000 / 60 / 60).toFixed()} Hours`);
+console.log(`${(myAge / 1000 / 60 / 60 / 24).toFixed()} Days`);
+console.log(`${(myAge / 1000 / 60 / 60 / 24 / 30).toFixed()} Months`);
+console.log(`${(myAge / 1000 / 60 / 60 / 24 / 365).toFixed()} Years`);
 
 // Needed Output
 
-// "username => Elzero"
-// "score => 1000"
-// {username: 'Elzero', score: 1000, id: 100}
+"1247939400 Seconds"
+"20798990 Minutes"
+"346650 Hours"
+"14444 Days"
+"481 Months"
+"40 Years"
