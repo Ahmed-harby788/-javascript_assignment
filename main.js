@@ -1,12 +1,15 @@
-let dateNow = new Date(1980, 0, 1, 0, 0, 1);
+let date = new Date();
+date.setDate(0);
 
-console.log(dateNow);
+console.log(date);
 
-//Another Code
+let monthNames = ["Jan", "Feb", "Mar", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
 
-let dateNowA = new Date(0);
-dateNowA.setFullYear(1980);
-dateNowA.setHours(0);
-dateNowA.setSeconds(1);
+console.log(`Previous Month Is ${monthNames[date.getUTCMonth()]} And Last Day Is ${date.getDate()}`);
 
-console.log(dateNowA);
+// Needed Output
+
+"Sat Apr 30 2022 18:13:20 GMT+0200 (Eastern European Standard Time)"
+"Previous Month Is April And Last Day Is 30"
