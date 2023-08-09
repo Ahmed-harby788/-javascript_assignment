@@ -1,12 +1,13 @@
-let myBirthday1 = new Date("Apr 20 94");
-console.log(myBirthday1);
-let myBirthday2 = new Date(1994, 3 ,20);
-console.log(myBirthday2);
-let myBirthday3 = new Date("1994-04-20T00:00:00");
-console.log(myBirthday3);
+let t0 = performance.now();
+
+for (let i = 0; i <= 9999; i++){
+  console.log(i);
+}
+
+let t1 = performance.now();
+
+console.log(`Loop Took ${(t1 - t0).toFixed()} Milliseconds.`);
 
 // Needed Output
 
-"Mon Oct 25 1982 00:00:00 GMT+0200 (Eastern European Standard Time)"
-"Mon Oct 25 1982 00:00:00 GMT+0200 (Eastern European Standard Time)"
-"Mon Oct 25 1982 00:00:00 GMT+0200 (Eastern European Standard Time)"
+"Loop Took 1921 Milliseconds."
